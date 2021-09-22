@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Инженерный калькулятор</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="calculator">
+        <div class="result">0</div>
+
+        <button class="function-button type">deg</button>
+        <button class="function-button" onclick="f('sin')">sin</button>
+        <button class="function-button" onclick="f('cos')">cos</button>
+        <button class="function-button" onclick="f('tan')">tan</button>
+
+        <button class="function-button deleat" onclick="deleat()">→</button>
+        <button class="function-button" onclick="percent()">%</button>
+        <button class="function-button clear" onclick="clearInput()">C</button>
+
+        <button class="function-button" onclick="operation('^-1')">x <sup>-1</sup></button>
+        <button class="function-button" onclick="fact()">x!</button>
+        <button class="function-button" onclick="log('ln')">ln</button>
+        <button class="function-button" onclick="log('lg')">lg</button>
+
+        <button class="function-button" onclick="operation('sqrt')">√x</button>
+        <button class="function-button" onclick="operation('^')">x<sup>y</sup></button>
+        <button class="function-button" onclick="constant('Π')">Π</button>
+        <button class="function-button" onclick="constant('e')">e</button>
+
+        <button class="function-button" onclick="partOne()">1/x</button>
+        <button onclick="insert('(')">(</button>
+        <button onclick="insert(')')">)</button>
+        <button class="operating-button" onclick="insert('+')">+</button>
+        
+        <button class="number-button" onclick="insert('7')">7</button>
+        <button class="number-button" onclick="insert('8')">8</button>
+        <button class="number-button" onclick="insert('9')">9</button>
+        <button class="operating-button" onclick="insert('*')">*</button>
+        
+        <button class="number-button" onclick="insert('4')">4</button>
+        <button class="number-button" onclick="insert('5')">5</button>
+        <button class="number-button" onclick="insert('6')">6</button>
+        <button class="operating-button" onclick="insert('/')">/</button>
+        
+        <button class="number-button" onclick="insert('1')">1</button>
+        <button class="number-button" onclick="insert('2')">2</button>
+        <button class="number-button" onclick="insert('3')">3</button>
+        <button class="operating-button" onclick="insert('-')">—</button>
+        
+        <button onclick="insert('.')">.</button>
+        <button class="number-button" onclick="insert('0')">0</button>
+        <button class="equals" onclick="calc()">=</button>
+    </div>
+
+
+
+    <script src="script.js"></script>
+  </body>
+</html>

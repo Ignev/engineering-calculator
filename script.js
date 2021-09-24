@@ -65,13 +65,29 @@ function operation(name) {
     input.textContent += "^";
   }
 }
-
+const memoize = (fn) => {
+  let cache = {};
+  return (...args) => {
+    let n = args[0]; 
+    if (n in cache) {
+      return cache[n];
+    }
+    else {
+      let result = fn(n);
+      cache[n] = result;
+      return result;
+    }
+  }
+}
 function factorial(n) {
   return n != 1 ? n * factorial(n - 1) : 1;
 }
+const memoizedfactorial =  memoize(factorial)
+
 function fact() {
-  input.textContent = factorial(+eval(input.textContent));
+  input.textContent = memoizedfactorial(+eval(input.textContent));
 }
+
 
 function log(name) {
   if (name === "lg") {
